@@ -154,7 +154,49 @@ class Curl {
     function put($url, $vars = array()) {
         return $this->request('PUT', $url, $vars);
     }
-    
+
+     /**
+     * Makes an HTTP PATCH request to the specified $url with an optional array or string of $vars
+     *
+     * Returns a CurlResponse object if the request was successful, false otherwise
+     *
+     * @param string $url
+     * @param array|string $vars 
+     * @return CurlResponse|boolean
+    **/   
+    function patch($url, $vars = array())
+    {
+        return $this->request('PATCH', $url, $vars);
+    }
+
+     /**
+     * Makes an HTTP CONNECT request to the specified $url with an optional array or string of $vars
+     *
+     * Returns a CurlResponse object if the request was successful, false otherwise
+     *
+     * @param string $url
+     * @param array|string $vars 
+     * @return CurlResponse|boolean
+    **/   
+    function connect($url, $vars = array())
+    {
+        return $this->request('CONNECT', $url, $vars);
+    }
+
+    /**
+     * Makes an HTTP Trace request to the specified $url with an optional array or string of $vars
+     *
+     * Returns a CurlResponse object if the request was successful, false otherwise
+     *
+     * @param string $url
+     * @param array|string $vars 
+     * @return CurlResponse|boolean
+    **/   
+    function trace($url, $vars = array())
+    {
+        return $this->request('TRACE', $url, $vars);
+    }
+
     /**
      * Makes an HTTP request of the specified $method to a $url with an optional array or string of $vars
      *
